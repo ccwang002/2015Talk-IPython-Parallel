@@ -1,12 +1,6 @@
-*************************************
-Handy Parallel(Distributed) Computing
-*************************************
-
-This talk covers beginning level of
-
-- multiprocessing
-- IPython Parallel
-- Celery
+*******************************
+IPython Parallel 使用與經驗分享
+*******************************
 
 
 授權 License
