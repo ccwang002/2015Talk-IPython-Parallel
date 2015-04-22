@@ -247,13 +247,14 @@ print([f.result() for f in future_ans])</code></pre>
     </div></section>
 
     <section id="demo-concurrent-result" class="slide"><div>
-        <pre class="language-bash tighter">
+      <pre class="language-bash tighter">
 <code>$ python3 demo_concurrent_async.py
 do sth else, waiting
 do sth else, waiting
 do sth else, waiting
 do sth else, waiting
 [True, True, True, True, True, False]</code></pre>
+      <p class="note">More about <a href="https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future" target="_blank">concurrent.futures.Future</a> on official documentation.</p>
     </div></section>
 
     <section id="concurrent-multithread" class="slide"><div>
@@ -265,7 +266,7 @@ def use_thread():
         ans = executor.map(is_prime, PRIMES)
         return ans</code>
         </pre>
-        <p class="tighter note">You <i>don't</i> gain computation boost by this.</p>
+        <p class="tighter note">You <em>don't</em> gain computation boost by this.</p>
     </div></section>
 
     <section id="builtin-democode" class="slide"><div>
@@ -275,7 +276,7 @@ def use_thread():
             <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/validate_prime.py">Straightforward and algorithm is_prime()</a></li>
             <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_multiprocess.py">Multiprocess</a></li>
             <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_multithread.py">Multithread</a></li>
-            <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_concurrent_futures.py">Async multiprocess</a></li>
+            <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_concurrent_futures.py">Explicitly using Future object</a></li>
         </ul>
         <p class="tighter">Demo codes are under <code>/demo_code/builtin-cpuheavy</code></p>
     </div></section>
@@ -289,7 +290,18 @@ Straight: 42.10
 Multithread: 39.47
 Multiprocess: 7.98</code>
         </pre>
-        <p>You don't get a 12x speed up because of forking process overhead</p>
+        <p>You don't get a 12x speed up because of the forking process overhead.</p>
+    </div></section>
+
+    <section id="asyncio-what-for" class="slide"><div>
+      <h2>So you forgot the asyncio module (Py 3.4+)</h2>
+      <ul>
+        <li>A builtin module to do asynchronous programming.</li>
+        <li>From call-backs to coroutines and an event loop.</li>
+        <li>In short, using asyncio doesn't escape GIL, so no benefit for CPU-bound tasks.</li>
+        <li class="next">Need some time to understand. Good learning resoures:<br>
+        </li>
+      </ul>
     </div></section>
 
     <section id="builtin-summary" class="slide"><div>
@@ -332,7 +344,7 @@ Multiprocess: 7.98</code>
             <li>Scale across multiple machines</li>
             <li>Support MPI, PBS, and SGE common schemes</li>
         </ul>
-        <p class="next">Simply, <i>awesome</i></p>
+        <p class="next">Simply, <i>awesome</i>.</p>
     </div></section>
 
     <section id="ipy-setup" class="slide"><div>
@@ -344,8 +356,12 @@ Multiprocess: 7.98</code>
 # or python3 ez_setup.py from setuptools
 pip3 install ipython[all]</code>
         </pre>
-        <p>Windows? <span class="next">(... get a *unix)</span><br />
+        <p>Windows? <span class="next">(... get a <del>*unix</del> Anaconda environment)</span><br />
             or search <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank">Unofficial Windows Binaries for Python</a></p>
+    </div></section>
+
+    <section id="win-setup-anaconda" class="slide"><div>
+      <h2>Serious (scientific env) setup on Windows</h2>
     </div></section>
 
     <section id="ipy-overview" class="slide"><div>
