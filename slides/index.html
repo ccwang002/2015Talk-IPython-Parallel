@@ -362,35 +362,50 @@ pip3 install ipython[all]</code>
 
     <section id="win-setup-anaconda" class="slide"><div>
       <h2>Serious (scientific env) setup on Windows</h2>
+      <ul>
+        <li>If you can't come up a solution, <strong>use Miniconda / Anaconda</strong>.</li>
+        <li>I wrote a small installation note on <a href="https://www.ptt.cc/bbs/Python/M.1422708625.A.497.html" target="_blank">ptt</a>.</li>
+      </ul>
+      <pre>
+      <code>conda install ipython-notebook</code>
+      </pre>
+      <p class="note">IPython notebook will launch a web browser and listen http://localhost:8888</p>
     </div></section>
 
     <section id="ipy-overview" class="slide"><div>
-        <h2 class="tighter">Overview</h2>
-        <img src="pics/IPyParallel_Overview.png" width="90%" alt="">
-        <pre class="language-ipython3 small">
-<code>In[1]: from IPython.parallel import Client
-       rc = Client() # connect controller
-In[2]: dview = rc[:] # return a View</code></pre>
+      <h2 class="tighter">Overview</h2>
+      <img src="pics/IPyParallel_Overview.png" width="90%" alt="">
+      <pre class="language-ipython3 small">
+        <code>In[1]: from IPython.parallel import Client
+  ...: rc = Client() # connect controller
+In[2]: dview = rc[:] # return a View</code>
+      </pre>
     </div><style>
-        #ipy-overview pre {
-            position: absolute;
-            top: 115px;
-            right: 175px;
-            border: 2px solid black;
-            padding: 0 5px;
-        }
+      #ipy-overview pre {
+        position: absolute;
+        top: 115px;
+        right: 175px;
+        border: 2px solid black;
+        padding: 0 5px;
+      }
     </style></section>
 
     <section id="ipy-start-cluster" class="slide"><div>
-        <h2 class="tighter">Start IPython Cluster</h2>
-        <pre class="language-bash tighter small">
-<code>$ ipcluster3 start
+      <h2 class="tighter">Start IPython Cluster</h2>
+      <pre class="language-bash tighter small">
+        <code>$ ipcluster start
 # [IPClusterStart] Using existing profile dir: '.../profile_default'
 # [IPClusterStart] Starting ipcluster with [daemon=False]
-# ... (automatically set up controller and engines locally)</code></pre>
-<p class="tighter">Or use IPython Notebook to start</p>
-<img src="pics/ipynb_cluster.png" alt="">
-    </div></section>
+# ... (automatically set up controller and engines locally)</code>
+      </pre>
+      <p class="tighter">Or use IPython Notebook to start</p>
+      <img src="pics/ipynb_cluster.png" alt="">
+    </div><style>
+      #ipy-start-cluster img {
+        width: 100%;
+      }
+    </style>
+    </section>
 
     <section id="ipy-demo" class="slide"><div>
         <pre class="language-ipython3 full-page">
@@ -423,9 +438,9 @@ Out[4]: [0, 1, 2, 3, 4, 5, 6, 7]
 
     <section id="ipy-nb" class="slide"><div>
         <h2>More in demo code</h2>
-        <p>Or this <a href="http://nbviewer.ipython.org/github/ccwang002/2014-handy-dist-computing/blob/master/demo_code/ipy-parallel/Hello_IPyParallel.ipynb">online IPython notebook</a> (hosted by Notebook Viewer)</p>
+        <p>Or this <a href="http://nbviewer.ipython.org/github/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/ipy-parallel/Hello_IPyParallel.ipynb">online IPython notebook</a> (hosted by Notebook Viewer)</p>
         <p class="tighter">You can use ipython notebook and actually <i>run</i> it.</p>
-        <pre class="language-bash tighter"><code>ipython3 notebook
+        <pre class="language-bash tighter"><code>ipython notebook
 # Luanch IPython notebook server
 # on http://localhost:8888/
 # ... (terminated by Ctrl-C/Ctrl-Z)</code></pre>
