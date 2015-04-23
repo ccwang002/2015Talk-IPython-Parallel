@@ -294,12 +294,12 @@ Multiprocess: 7.98</code>
     </div></section>
 
     <section id="asyncio-what-for" class="slide"><div>
-      <h2>So you forgot the asyncio module (Py 3.4+)</h2>
+      <h2>So you forgot the asyncio module</h2>
       <ul>
-        <li>A builtin module to do asynchronous programming.</li>
-        <li>From call-backs to coroutines and an event loop.</li>
-        <li>In short, using asyncio doesn't escape GIL, so no benefit for CPU-bound tasks.</li>
-        <li class="next">Need some time to understand. Good learning resoures:<br>
+        <li>New <a href="https://docs.python.org/3/library/asyncio.html">builtin module</a> to do asynchronous programming since Python 3.4+.</li>
+        <li>From writing call-backs to <strong>coordinating coroutines and an event loop</strong>.</li>
+        <li>In short, using asyncio doesn't escape GIL, so no benefit for CPU-bound tasks. In fact, overhead of generators may make the asyncio code run slower than the thread one (<a hre f="http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/">ref</a>).</li>
+        <li class="next">Need some time to understand. Good learning resoures: <a href="https://www.youtube.com/watch?v=MCs5OvhV9S4">David Beazley's talk in PyCon 2015</a>, <a href="https://speakerdeck.com/uranusjr/yield">TP's talk in PyCon APAC 2014</a>, and <a href="http://ntoll.org/article/asyncio">Blog Post from Nicholas H.Tollervey</a>.
         </li>
       </ul>
     </div></section>
