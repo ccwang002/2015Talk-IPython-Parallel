@@ -17,7 +17,7 @@
   <!-- Header in overview -->
   <header class="caption">
     <h1>IPython Parallel 使用與經驗分享</h1>
-    <p style="line-height: 32px; padding-top:15px;">Liang Bo Wang (亮亮), 2015-04-22</p>
+    <p style="line-height: 32px; padding-top:15px;"><a href="http://liang2.tw">Liang Bo Wang (亮亮)</a>, 2015-04-22</p>
   </header>
 
   <!-- START OF SLIDE CONTENT -->
@@ -451,6 +451,104 @@ Out[4]: [0, 1, 2, 3, 4, 5, 6, 7]</code>
 # ... (terminated by Ctrl-C/Ctrl-Z)</code>
     </pre>
   </div></section>
+
+  <section id="ipy-parallel-decorator" class="slide"><div>
+    <h2>Now more about the IPy Parallel</h2>
+    <p class="tighter">Decorator <a href="https://ipython.org/ipython-doc/stable/api/generated/IPython.parallel.client.view.html#IPython.parallel.client.view.View" target="_blank"><code>View.parallel</code></a> wraps your function as a parallel task runner, which works the same as previous way.</p>
+    <pre class="language-python3 tighter">
+      <code>@dview.parallel(block=False)
+def my_work(arg1, arg2):
+    pass
+
+my_work.map(all_input1, all_input2)</code>
+    </pre>
+  </div><style>
+    #ipy-parallel-decorator a,
+    #ipy-parallel-decorator a > code {
+      color: #4B86C2;
+    }
+  </style></section>
+
+  <section id="ipy-parallel-view" class="slide"><div>
+    <h2>Different types of views - load balancer</h2>
+    <p class="tighter">View we used before was <a href="https://ipython.org/ipython-doc/dev/api/generated/IPython.parallel.client.view.html#IPython.parallel.client.view.DirectView" target="_blank"><code>DirectView</code></a>, a one-to-one mapping of all available engines. Input tasks was first split then passed to engines <strong>before execution</strong>.</p>
+    <p class="next tighter">Another view called <a href="https://ipython.org/ipython-doc/dev/api/generated/IPython.parallel.client.view.html#IPython.parallel.client.view.LoadBalancedView"><code>LoadBalancedView</code></a> passes the input tasks to idle engines <strong>on the fly</strong> to prevent task congestion in busy engines.</p>
+    <pre class="language-python3 next">
+      <code>rc = Client()
+lbview = <mark>rc.load_balanced_view()</mark></code>
+    </pre>
+  </div><style>
+    #ipy-parallel-view a,
+    #ipy-parallel-view a > code {
+      color: #4B86C2;
+    }
+  </style></section>
+
+  <section id="ipy-nb-load-balance" class="slide"><div>
+    <h2>How load balance helps the parallelization</h2>
+    <p>Visualize and demo in <a href="http://nbviewer.ipython.org/github/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/ipy-parallel/Load%20Balanced%20View.ipynb">this notebook</a>.</p>
+    <p>More Python packages required: <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://matplotlib.org/">matplotlib</a>, and <a href="http://stanford.edu/~mwaskom/software/seaborn/">seaborn</a>. On Anaconda, the installation is as trivial as one single command.</p>
+    <pre><code>conda install pandas matplotlib seaborn</code></pre>
+  </div></section>
+
+  <section id="ipy-view-direct" class="slide"><div>
+    <h2>Task execution - direct view</h2>
+    <img class="full-width" src="pics/task_exe_history_direct.svg" alt="">
+    <p class="annotation next">A deliberate worst case for preallocated task.<br>Optimally should only take around 3 seconds.</p>
+  </div><style>
+    #ipy-view-direct p.annotation {
+      position: absolute;
+      width: 250px;
+      padding: 10px 15px;
+      top: 240px;
+      right: 160px;
+      color: #4D4D48;
+      line-height: 1.5em;
+      font-size: 24px;
+      background-color: #F1F1E4;
+    }
+  </style></section>
+
+  <section id="ipy-view-load-balanced" class="slide"><div>
+    <h2>Task execution - load balanced</h2>
+    <img class="full-width" src="pics/task_exe_history_load_balanced.svg" alt="">
+    <p class="annotation next">Note the space between adjacent tasks.<br>
+    If tasks of different engines complete at the same time, they stocked at the load balancer so a longer pause required. (see randomized work for comparison)</p>
+  </div><style>
+    #ipy-view-load-balanced p.annotation {
+      position: absolute;
+      width: 300px;
+      padding: 10px 15px;
+      top: 225px;
+      left: 180px;
+      color: #FFF;
+      line-height: 1.5em;
+      font-size: 24px;
+      background-color: #7973AE;
+    }
+  </style></section>
+
+  <section id="ipy-rand-task-direct" class="slide"><div>
+    <h2>Random task execution - direct view</h2>
+    <img class="full-width" src="pics/task_random_direct.svg" alt="">
+    <p class="annotation">All engines run the exactly same number of tasks (shown by color)</p>    
+  </div><style>
+    #ipy-rand-task-direct p.annotation {
+      position: relative;
+      bottom: 20px;
+    }
+  </style></section>
+
+  <section id="ipy-rand-task-load-balanced" class="slide"><div>
+    <h2>Random task execution - load balanced</h2>
+    <img class="full-width" src="pics/task_random_load_balanced.svg" alt="">
+    <p class="annotation">Some engines run fewer tasks if their previous work load are heavier. Pause space are shorter since they return randomly.</p>    
+  </div><style>
+    #ipy-rand-task-load-balanced p.annotation {
+      position: relative;
+      bottom: 10px;
+    }
+  </style></section>
 
   <section id="ipy-summary" class="slide"><div>
     <h2>Summary for IPy Parallel</h2>

@@ -84,3 +84,7 @@ section.slide.twocol-lr div.right {
     width: 65%;
     float: right;
 }
+
+section.slide img.full-width {
+    width: 100%;
+}
