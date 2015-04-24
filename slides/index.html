@@ -531,7 +531,7 @@ lbview = <mark>rc.load_balanced_view()</mark></code>
   <section id="ipy-rand-task-direct" class="slide"><div>
     <h2>Random task execution - direct view</h2>
     <img class="full-width" src="pics/task_random_direct.svg" alt="">
-    <p class="annotation">All engines run the exactly same number of tasks (shown by color)</p>    
+    <p class="annotation">All engines run the exactly same number of tasks (shown by color)</p>
   </div><style>
     #ipy-rand-task-direct p.annotation {
       position: relative;
@@ -542,13 +542,39 @@ lbview = <mark>rc.load_balanced_view()</mark></code>
   <section id="ipy-rand-task-load-balanced" class="slide"><div>
     <h2>Random task execution - load balanced</h2>
     <img class="full-width" src="pics/task_random_load_balanced.svg" alt="">
-    <p class="annotation">Some engines run fewer tasks if their previous work load are heavier. Pause space are shorter since they return randomly.</p>    
+    <p class="annotation">Some engines run fewer tasks if their previous work load are heavier. Pause space are shorter since they return randomly.</p>
   </div><style>
     #ipy-rand-task-load-balanced p.annotation {
       position: relative;
       bottom: 10px;
     }
   </style></section>
+
+  <section id="ipy-cluster" class="slide"><div>
+    <h2 class="tighter">IPy parallel across machines</h2>
+    <ul class="tighter">
+      <li>Previously we use <code>ipcluster</code> to start the cluster.</li>
+      <li>Now break it down to <code>ipcontroller</code> and <code>ipcluster engines</code>.</li>
+      <li>IPy controller creates a connection info file at <br><code>&lt;profile_dir&gt;/security/ipcontroller-engine.json</code></li>
+      <li>Engines read that file to know how to connect the controller (e.g. which ip and port).</li>
+      <li>To sum up, (1) launch controller; (2) launch engines (may on different machines); (3) connect by calling Client().</li>
+    </ul>
+    <p>More detailed guide: <a href="https://github.com/tritemio/PyBroMo/wiki/Howto-setup-an-IPython-cluster">PyBroMo's  wiki</a>.</p>
+  </div></section>
+
+  <section id="ipy-cluster-demo" class="slide"><div>
+  <pre class="tighter language-bash">
+    <code>ipython profile create --parallel --profile=parallel
+# on master
+ipcontroller --profile=parallel
+# on slave(s)
+ipcluster engines --profile=parallel \
+  --file=/path/to/ipcontroller-engine.json
+# or modify path of `c.IPEngineApp.url_file` in
+# ~\.ipython\profile_parallel\ipengine_config.py </code>
+  </pre>
+  <p class="tighter">Then use it normally by <code>rc = Client(profile='parallel')</code></p>
+  </div></section>
 
   <section id="ipy-summary" class="slide"><div>
     <h2>Summary for IPy Parallel</h2>
@@ -711,13 +737,14 @@ print(result.get())</code></pre>
     <ul>
       <li>Put these tools under your pillow
         <ul>
-          <li>multiprocessing, multithreading, concurrent</li>
+          <li>multiprocessing, multithreading, and concurrent.futures</li>
           <li>IPython Parallel</li>
+          <li>Load balanced view</li>
           <li>Python 3.4 and asyncio (if tasks are IO bound)</li>
         </ul>
       </li>
       <li>Parallelism is hard but keep calm, there are simple situations</li>
-      <li class="next">Enjoy PyCon APAC! (we'd like to have your feedback)</li>
+      <li>Enjoy PyCon APAC! (we'd like to have your feedback)</li>
     </ul>
   </div></section>
 
