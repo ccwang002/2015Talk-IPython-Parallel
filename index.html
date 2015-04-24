@@ -17,142 +17,141 @@
   <!-- Header in overview -->
   <header class="caption">
     <h1>IPython Parallel 使用與經驗分享</h1>
-    <p style="line-height: 32px; padding-top:15px;">Liang Bo Wang (亮亮), 2015-04-22</p>
+    <p style="line-height: 32px; padding-top:15px;"><a href="http://liang2.tw">Liang Bo Wang (亮亮)</a>, 2015-04-22</p>
   </header>
 
-    <!-- START OF SLIDE CONTENT -->
+  <!-- START OF SLIDE CONTENT -->
 
-    <!-- Cover slide -->
-    <section id="cover" class="slide cover w"><div>
-      <h3 id="talk-subheader">Kaohsiung Python User Group, 2015-04-22</h3>
-      <h2 id="talk-header">IPython Parallel 使用與經驗分享</h2>
-      <p id="talk-author">
-        <a href="http://liang2.tw" target="_blank">亮亮</a> under CC 4.0 BY license
-      </p>
-      <p id="usage-instr">
-        <kbd>Esc</kbd> to overview <br />
-        <kbd>←</kbd> <kbd>→</kbd> to navigate
-      </p>
-      <img src="pics/cover.jpg" alt="">
-    </div>
-    <style>
-      #talk-header {
-        color: #D91A3C;
-        text-align: center;
-        font-size: 80px;
-        line-height: 1.2em;
-        opacity: 0.8;
-        position: relative;
-        top: -50px;
-      }
-      #talk-subheader {
-        color: #0376A6;
-        text-align: center;
-        font-size: 32px;
-        opacity: 0.3;
-        position: relative;
-        top: -90px;
-      }
-      #talk-author {
-        position: relative;
-        top: -50px;
-      }
-      #cover p {
-        margin: 10px 0 0;
-        text-align: center;
-        color: #FFFA20;
-        font-size: 32px;
-        opacity: 0.8;
-      }
-      #talk-author a {
-        color: #FFFA20;
-      }
-      #usage-instr {
-        position: absolute;
-        text-align: right;
-        right: 30px;
-        bottom: 20px;
-      }
-      #usage-instr kbd {
-        opacity: 0.8;
-        color: #D91A3C;
-        background-color: white;
-      }
-      #cover .src-link {
-        position: absolute;
-        font-size: 14px;
-        text-align: right;
-        bottom: 10px;
-        right: 10px;
-      }
-      #cover img {
-        opacity: 1;
-      }
-    </style>
-    </section>
+  <!-- Cover slide -->
+  <section id="cover" class="slide cover w"><div>
+    <h3 id="talk-subheader">Kaohsiung Python User Group, 2015-04-22</h3>
+    <h2 id="talk-header">IPython Parallel 使用與經驗分享</h2>
+    <p id="talk-author">
+      <a href="http://liang2.tw" target="_blank">亮亮</a> under CC 4.0 BY license
+    </p>
+    <p id="usage-instr">
+      <kbd>Esc</kbd> to overview <br />
+      <kbd>←</kbd> <kbd>→</kbd> to navigate
+    </p>
+    <img src="pics/cover.jpg" alt="">
+  </div>
+  <style>
+    #talk-header {
+      color: #D91A3C;
+      text-align: center;
+      font-size: 80px;
+      line-height: 1.2em;
+      opacity: 0.8;
+      position: relative;
+      top: -50px;
+    }
+    #talk-subheader {
+      color: #0376A6;
+      text-align: center;
+      font-size: 32px;
+      opacity: 0.3;
+      position: relative;
+      top: -90px;
+    }
+    #talk-author {
+      position: relative;
+      top: -50px;
+    }
+    #cover p {
+      margin: 10px 0 0;
+      text-align: center;
+      color: #FFFA20;
+      font-size: 32px;
+      opacity: 0.8;
+    }
+    #talk-author a {
+      color: #FFFA20;
+    }
+    #usage-instr {
+      position: absolute;
+      text-align: right;
+      right: 30px;
+      bottom: 20px;
+    }
+    #usage-instr kbd {
+      opacity: 0.8;
+      color: #D91A3C;
+      background-color: white;
+    }
+    #cover .src-link {
+      position: absolute;
+      font-size: 14px;
+      text-align: right;
+      bottom: 10px;
+      right: 10px;
+    }
+    #cover img {
+      opacity: 1;
+    }
+  </style>
+  </section>
 
-    <section id="about-me" class="slide"><div>
-        <h2>About Me</h2>
-        <ul>
-          <li>亮亮 / liang2 / Liang Bo Wang</li>
-            <li>Master student at <br />
-                Bioinfo &amp; Biostat Core Lab, NTU CGM</li>
-            <li>Learn to speak DNA</li>
-            <li>R / Python</li>
-            <li>Taiwan R co-organizer</li>
-            <li>PyCon APAC 2014-15/TW staff</li>
-            <li>Former intern at Microsoft Research Asia</li>
-        </ul>
-        <img id="protrait" src="pics/me.jpg" alt="">
-    </div>
-    <style>
-        #protrait {
-            position: absolute;
-            right: 120px;
-            top: 120px;
-        }
-    </style>
-    </section>
+  <section id="about-me" class="slide"><div>
+    <h2>About Me</h2>
+    <ul>
+      <li>亮亮 / liang2 / Liang Bo Wang</li>
+      <li>Master student at <br />
+          Bioinfo &amp; Biostat Core Lab, NTU CGM</li>
+      <li>Learn to speak DNA</li>
+      <li>R / Python</li>
+      <li>Taiwan R co-organizer</li>
+      <li>PyCon APAC 2014-15/TW staff</li>
+      <li>Former intern at Microsoft Research Asia</li>
+    </ul>
+    <img id="protrait" src="pics/me.jpg" alt="">
+  </div>
+  <style>
+    #protrait {
+      position: absolute;
+      right: 120px;
+      top: 120px;
+    }
+  </style>
+  </section>
 
-    <section id="toc" class="slide"><div>
-      <h2>TOC (for first half)</h2>
-      <ul>
-        <li><i class="red">multiprocessing</i>: batteries included standard modules</li>
-        <li><i class="red">IPython Parallel</i>: debuggable and interactive </li>
-        <li><del><i class="red">Celery</i>: distributed task queue</del> (no experience)</li>
-        <li>Experience sharing</li>
-        <li>Summary</li>
-      </ul>
-      <p>Second half will be about my intern at MSRA (won't share the slide) in free discussion form.</p>
-    </div></section>
+  <section id="toc" class="slide"><div>
+    <h2>TOC (for first half)</h2>
+    <ul>
+      <li><i class="red">multiprocessing</i>: batteries included standard modules</li>
+      <li><i class="red">IPython Parallel</i>: debuggable and interactive </li>
+      <li><del><i class="red">Celery</i>: distributed task queue</del> (no experience)</li>
+      <li>Experience sharing</li>
+      <li>Summary</li>
+    </ul>
+    <p>Second half will be about my intern at MSRA (won't share the slide) in free discussion form.</p>
+  </div></section>
 
-    <section id="story" class="slide"><div>
-        <h2>Aweful feelings ...</h2>
-        <img src="pics/sad_load.png" width="100%" alt="">
-        <p>Engineers' time is  more <i>valuable</i> than computing, but many algorithms is hard to make it parallel.</p>
-    </div></section>
+  <section id="story" class="slide"><div>
+    <h2>Aweful feelings ...</h2>
+    <img src="pics/sad_load.png" width="100%" alt="">
+    <p>Engineers' time is  more <i>valuable</i> than computing, but many algorithms is hard to make it parallel.</p>
+  </div></section>
 
-    <section id="story-epic" class="slide cover w"><div>
-        <h2>That's exactly what I want</h2>
-        <img src="pics/EPIC_load_ipy.jpg" alt="">
-        <p class="next">Not hard if your tasks are independent. Here we focus on the easiest pattern.</p>
-    </div><style>
-        #story-epic h2 {
-            color: #EEE;
-            text-align: center;
-            width: 100%;
-            margin: 0px;
-            position: absolute;
-            bottom: 60px;
-            left: 0px;
+  <section id="story-epic" class="slide cover w"><div>
+    <h2>That's exactly what I want</h2>
+    <img src="pics/EPIC_load_ipy.jpg" alt="">
+    <p class="next">Not hard if your tasks are independent. Here we focus on the easiest pattern.</p>
+  </div><style>
+    #story-epic h2 {
+      color: #EEE;
+      text-align: center;
+      width: 100%;
+      margin: 0px;
+      position: absolute;
+      bottom: 60px;
+      left: 0px;
+    }
+  </style></section>
 
-        }
-    </style></section>
-
-    <section id="val-prime" class="slide"><div>
-        <h2 class="tighter">Prime number validation</h2>
-        <pre class="language-python3">
-<code>PRIMES = [int(l) for l in open('prime_list.txt')]
+  <section id="val-prime" class="slide"><div>
+    <h2 class="tighter">Prime number validation</h2>
+    <pre class="language-python3">
+      <code>PRIMES = [int(l) for l in open('prime_list.txt')]
 def is_prime(n):
     if n % 2 == 0:
         return False
@@ -160,80 +159,84 @@ def is_prime(n):
     for i in range(3, sqrt_n + 1, 2):
         if n % i == 0:
             return False
-    return True</code></pre>
-    </div></section>
+    return True</code>
+    </pre>
+  </div></section>
 
-    <section id="orig-way" class="slide"><div>
-        <h2 class="tighter">Straightforward way</h2>
-        <p class="tighter">Validate them one-by-one and benchmark by <code>timeit</code></p>
-        <pre class="language-python3">
-<code>def orig_way():
+  <section id="orig-way" class="slide"><div>
+    <h2 class="tighter">Straightforward way</h2>
+    <p class="tighter">Validate them one-by-one and benchmark by <code>timeit</code></p>
+    <pre class="language-python3">
+      <code>def orig_way():
     ans = [is_prime(prime) for prime in PRIMES]
     return ans
 
 from timeit import timeit
 timeit('orig_way()', 'from __main__ import orig_way',
-       number=3)  # return total time of all runs</code></pre>
-    </div></section>
+       number=3)  # return total time of all runs</code>
+     </pre>
+  </div></section>
 
-	<section id="builtin-cover" class="slide cover w" ><div>
-        <h2>Using Python<br />Standard Library</h2>
-		<img src="pics/mid.jpg" alt="">
-    </div>
-    <style>
-        #builtin-cover h2 {
-            margin: 0px 0 0px;
-            color: #D91A3C;
-            text-align: left;
-            font-size: 100px;
-            line-height: 1.2em;
-            opacity: 0.8;
-            position: absolute;
-            top: 50px;
-            left: 60px;
-        }
-    </style>
-    </section>
+<section id="builtin-cover" class="slide cover w" ><div>
+  <h2>Using Python<br />Standard Library</h2>
+  <img src="pics/mid.jpg" alt="">
+  </div>
+  <style>
+    #builtin-cover h2 {
+      margin: 0px 0 0px;
+      color: #D91A3C;
+      text-align: left;
+      font-size: 100px;
+      line-height: 1.2em;
+      opacity: 0.8;
+      position: absolute;
+      top: 50px;
+      left: 60px;
+    }
+  </style>
+  </section>
 
-    <section id="thread-process-in-python" class="slide"><div>
-        <h2 class="tighter">Threads and Process in Python</h2>
-        <p class="tighter">Multithread, <code>threading</code>, does not work as expected because of GIL.</p>
-        <p class="tighter" align="right">
-            <img src="pics/David%20Beazley_gil_explain.png" width="100%" alt="">
-            (From David Beazley's <a href="http://www.dabeaz.com/python/UnderstandingGIL.pdf" target="_blank"><i>Understanding GIL</i></a>)
-        </p>
-    </div></section>
+  <section id="thread-process-in-python" class="slide"><div>
+    <h2 class="tighter">Threads and Process in Python</h2>
+    <p class="tighter">Multithread, <code>threading</code>, does not work as expected because of GIL.</p>
+    <p class="tighter" align="right">
+      <img src="pics/David%20Beazley_gil_explain.png" width="100%" alt="">
+      (From David Beazley's <a href="http://www.dabeaz.com/python/UnderstandingGIL.pdf" target="_blank"><i>Understanding GIL</i></a>)
+    </p>
+  </div></section>
 
-    <section id="demo-multiprocessing" class="slide"><div>
-        <h2 class="tighter">Multiprocess easy and elegant in Python</h2>
-        <pre class="language-python3 tighter">
-<code>>>> from validate_prime import is_prime, PRIMES
+  <section id="demo-multiprocessing" class="slide"><div>
+    <h2 class="tighter">Multiprocess easy and elegant in Python</h2>
+    <pre class="language-python3 tighter">
+      <code>>>> from validate_prime import is_prime, PRIMES
 >>> from multiprocessing import Pool
 >>> p = Pool(2)  # max concurrent processes
 >>> p.map(is_prime, PRIMES[:4])
-[True, True, True, True]</code></pre>
-<pre class="language-python3 tighter next">
-<code>>>>  # Ctrl-C / Ctrl-Z
+[True, True, True, True]</code>
+    </pre>
+    <pre class="language-python3 tighter next">
+      <code>>>>  # Ctrl-C / Ctrl-Z
 Traceback x N ... endless
-<mark class="important">BOOOOOOOOM!!</mark> # NEVER run this interactively</code></pre>
-    </div></section>
+<mark class="important">BOOOOOOOOM!!</mark> # NEVER run this interactively</code>
+    </pre>
+  </div></section>
 
-    <section id="concurrent-multiprocess" class="slide"><div>
-        <h2 class="tighter">Use concurrent.futures (Py 3.2+)</h2>
-        <p class="tighter">
-            Still not safe in interactive mode. Provide some async APIs, which immediately returns a Future object.</p>
-<pre class="language-python3 tighter">
-<code>from concurrent.futures import ProcessPoolExecutor
+  <section id="concurrent-multiprocess" class="slide"><div>
+    <h2 class="tighter">Use concurrent.futures (Py 3.2+)</h2>
+    <p class="tighter">Still not safe in interactive mode. Provide some async APIs, which immediately returns a Future object.</p>
+    <pre class="language-python3 tighter">
+      <code>from concurrent.futures import ProcessPoolExecutor
 def use_process():
     with ProcessPoolExecutor(4) as executor:
         all_ans = executor.map(is_prime, PRIMES)
         return all_ans  # block at leaving `with` block
-use_process()</code></pre>
-    </div></section>
+use_process()</code>
+    </pre>
+  </div></section>
 
-    <section id="demo-concurrent" class="slide"><div>
-        <pre class="language-python3 full-page">
-<code>executor = ProcessPoolExecutor(4)
+  <section id="demo-concurrent" class="slide"><div>
+    <pre class="language-python3 full-page">
+      <code>executor = ProcessPoolExecutor(4)
 # every submit returns a future, nonblocking
 futures = [executor.submit(is_prime, p)
            for p in PRIMES[:6]]
@@ -243,173 +246,173 @@ while not all(map(lambda f: f.done(), futures)):
     sleep(1)
 
 # get result from done futures
-print([f.result() for f in future_ans])</code></pre>
-    </div></section>
+print([f.result() for f in future_ans])</code>
+    </pre>
+  </div></section>
 
-    <section id="demo-concurrent-result" class="slide"><div>
-      <pre class="language-bash tighter">
-<code>$ python3 demo_concurrent_async.py
+  <section id="demo-concurrent-result" class="slide"><div>
+    <pre class="language-bash tighter">
+      <code>$ python3 demo_concurrent_async.py
 do sth else, waiting
 do sth else, waiting
 do sth else, waiting
 do sth else, waiting
 [True, True, True, True, True, False]</code></pre>
-      <p class="note">More about <a href="https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future" target="_blank">concurrent.futures.Future</a> on official documentation.</p>
-    </div></section>
+    <p class="note">More about <a href="https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future" target="_blank">concurrent.futures.Future</a> on official documentation.</p>
+  </div></section>
 
-    <section id="concurrent-multithread" class="slide"><div>
-        <h2>concurrent.future for thread pooling</h2>
-        <pre class="language-bash tighter">
-<code># replace ProcessPoolExecutor with ThreadPoolExecutor
+  <section id="concurrent-multithread" class="slide"><div>
+    <h2>concurrent.future for thread pooling</h2>
+    <pre class="language-python3 tighter">
+      <code># replace ProcessPoolExecutor with ThreadPoolExecutor
 def use_thread():
     with ThreadPoolExecutor(4) as executor:
         ans = executor.map(is_prime, PRIMES)
         return ans</code>
-        </pre>
-        <p class="tighter note">You <em>don't</em> gain computation boost by this.</p>
-    </div></section>
+    </pre>
+    <p class="tighter note">You <em>don't</em> gain computation boost by this.</p>
+  </div></section>
 
-    <section id="builtin-democode" class="slide"><div>
-        <h2>Demo codes</h2>
-        <p class="tighter">Ways to speed up using standard library so far:</p>
-        <ul>
-            <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/validate_prime.py">Straightforward and algorithm is_prime()</a></li>
-            <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_multiprocess.py">Multiprocess</a></li>
-            <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_multithread.py">Multithread</a></li>
-            <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_concurrent_futures.py">Explicitly using Future object</a></li>
-        </ul>
-        <p class="tighter">Demo codes are under <code>/demo_code/builtin-cpuheavy</code></p>
-    </div></section>
+  <section id="builtin-democode" class="slide"><div>
+    <h2>Demo codes</h2>
+    <p class="tighter">Ways to speed up using standard library so far:</p>
+    <ul>
+      <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/validate_prime.py">Straightforward and algorithm is_prime()</a></li>
+      <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_multiprocess.py">Multiprocess</a></li>
+      <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_multithread.py">Multithread</a></li>
+      <li><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/builtin-cpuheavy/demo_concurrent_futures.py">Explicitly using Future object</a></li>
+    </ul>
+    <p class="tighter">Demo codes are under <code>/demo_code/builtin-cpuheavy</code></p>
+  </div></section>
 
-    <section id="builtin-benchmark" class="slide"><div>
-        <h2>Benchmark on a 12 core machine</h2>
-        <pre class="language-bash tighter">
-<code>> python3 benchmark.py
+  <section id="builtin-benchmark" class="slide"><div>
+    <h2>Benchmark on a 12 core machine</h2>
+    <pre class="language-bash tighter">
+      <code>> python3 benchmark.py
 # Minimum time average of 3 in 3 repeats
 Straight: 42.10
 Multithread: 39.47
 Multiprocess: 7.98</code>
-        </pre>
-        <p>You don't get a 12x speed up because of the forking process overhead.</p>
-    </div></section>
+    </pre>
+    <p>You don't get a 12x speed up because of the forking process overhead.</p>
+  </div></section>
 
-    <section id="asyncio-what-for" class="slide"><div>
-      <h2>So you forgot the asyncio module</h2>
-      <ul>
-        <li>New <a href="https://docs.python.org/3/library/asyncio.html">builtin module</a> to do asynchronous programming since Python 3.4+.</li>
-        <li>From writing call-backs to <strong>coordinating coroutines and an event loop</strong>.</li>
-        <li>In short, using asyncio doesn't escape GIL, so no benefit for CPU-bound tasks. In fact, overhead of generators may make the asyncio code run slower than the thread one (<a hre f="http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/">ref</a>).</li>
-        <li class="next">Need some time to understand. Good learning resoures: <a href="https://www.youtube.com/watch?v=MCs5OvhV9S4">David Beazley's talk in PyCon 2015</a>, <a href="https://speakerdeck.com/uranusjr/yield">TP's talk in PyCon APAC 2014</a>, and <a href="http://ntoll.org/article/asyncio">Blog Post from Nicholas H.Tollervey</a>.
-        </li>
-      </ul>
-    </div></section>
+  <section id="asyncio-what-for" class="slide"><div>
+    <h2>So you forgot the asyncio module</h2>
+    <ul>
+      <li>New <a href="https://docs.python.org/3/library/asyncio.html">builtin module</a> to do asynchronous programming since Python 3.4+.</li>
+      <li>From writing call-backs to <strong>coordinating coroutines and an event loop</strong>.</li>
+      <li>In short, using asyncio doesn't escape GIL, so no benefit for CPU-bound tasks. In fact, overhead of generators may make the asyncio code run slower than the thread one (<a hre f="http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/">ref</a>).</li>
+      <li class="next">Need some time to understand. Good learning resoures: <a href="https://www.youtube.com/watch?v=MCs5OvhV9S4">David Beazley's talk in PyCon 2015</a>, <a href="https://speakerdeck.com/uranusjr/yield">TP's talk in PyCon APAC 2014</a>, and <a href="http://ntoll.org/article/asyncio">Blog Post from Nicholas H.Tollervey</a>.
+      </li>
+    </ul>
+  </div></section>
 
-    <section id="builtin-summary" class="slide"><div>
-        <h2>Summary for built-in modules</h2>
-        <ul>
-            <li>Easy to write</li>
-            <li>High level APIs available</li>
-            <li><b>Fail in interactive mode</b><br />
-                Bad because that's the way we do data mangling</li>
-            <li><b>Limited Scalability</b><br />
-                Simply don't scale, and it is hard to find a 100 core server</li>
-            <li>Use multithread for IO bound; multiprocess for CPU bound tasks</li>
-        </ul>
-    </div></section>
+  <section id="builtin-summary" class="slide"><div>
+    <h2>Summary for built-in modules</h2>
+    <ul>
+      <li>Easy to write</li>
+      <li>High level APIs available</li>
+      <li><b>Fail in interactive mode</b><br />
+          Bad because that's the way we do data mangling</li>
+      <li><b>Limited Scalability</b><br />
+          Simply don't scale, and it is hard to find a 100 core server</li>
+      <li>Use multithread for IO bound; multiprocess for CPU bound tasks</li>
+    </ul>
+  </div></section>
 
-	<section id="ipy-cover" class="slide cover w" ><div>
-        <h2>Introducing <br />IPython Parallel</h2>
-		<img src="pics/mid.jpg" alt="">
-    </div>
-    <style>
-        #ipy-cover h2 {
-            margin: 0px 0 0px;
-            color: #D91A3C;
-            text-align: left;
-            font-size: 100px;
-            line-height: 1.2em;
-            opacity: 0.8;
-            position: absolute;
-            top: 50px;
-            left: 60px;
-        }
-    </style>
-    </section>
+<section id="ipy-cover" class="slide cover w" ><div>
+  <h2>Introducing <br />IPython Parallel</h2>
+  <img src="pics/mid.jpg" alt="">
+  </div>
+  <style>
+    #ipy-cover h2 {
+      margin: 0px 0 0px;
+      color: #D91A3C;
+      text-align: left;
+      font-size: 100px;
+      line-height: 1.2em;
+      opacity: 0.8;
+      position: absolute;
+      top: 50px;
+      left: 60px;
+    }
+  </style>
+  </section>
 
-    <section id="ipy-feature" class="slide"><div>
-        <h2>Features of IPython Parallel</h2>
-        <ul>
-            <li>Get all the goodness of IPython</li>
-            <li>Both interactive and parallel. Highly useful in data analysis</li>
-            <li>Scale across multiple machines</li>
-            <li>Support MPI, PBS, and SGE common schemes</li>
-        </ul>
-        <p class="next">Simply, <i>awesome</i>.</p>
-    </div></section>
+  <section id="ipy-feature" class="slide"><div>
+    <h2>Features of IPython Parallel</h2>
+    <ul>
+      <li>Get all the goodness of IPython</li>
+      <li>Both interactive and parallel. Highly useful in data analysis</li>
+      <li>Scale across multiple machines</li>
+      <li>Support MPI, PBS, and SGE common schemes</li>
+    </ul>
+    <p class="next">Simply, <i>awesome</i>.</p>
+  </div></section>
 
-    <section id="ipy-setup" class="slide"><div>
-        <h2>Setup</h2>
-        <p class="tighter">Trivial for Python 3.4+, which comes along with <a href="https://pip.pypa.io/en/latest/installing.html">pip</a>.</p>
-        <pre class="language-bash tighter">
+  <section id="ipy-setup" class="slide"><div>
+    <h2>Setup</h2>
+    <p class="tighter">Trivial for Python 3.4+, which comes along with <a href="https://pip.pypa.io/en/latest/installing.html">pip</a>.</p>
+    <pre class="language-bash tighter">
 <code># For Debian/Ubuntu, apt-get install ipython3-notebook
 pip3 install ipython[all]</code>
-        </pre>
-        <p class="tighter">Windows? <span class="next"><del>Get a *unix system.</del></span</p>
-        <p class="next tighter">Try Anaconda(Miniconda) scientific Python solution, which automatically manages both python and <em>external</em> dependencies.</p>
-    </div></section>
+    </pre>
+    <p class="tighter">Windows? <span class="next"><del>Get a *unix system.</del></span</p>
+    <p class="next tighter">Try Anaconda(Miniconda) scientific Python solution, which automatically manages both python and <em>external</em> dependencies.</p>
+  </div></section>
 
-    <section id="win-setup-anaconda" class="slide"><div>
-      <h2>(Scientific) Python setup on Windows</h2>
-      <ul class="tighter">
-        <li>If you can't come up a solution, <strong>use Miniconda / Anaconda</strong>.</li>
-        <li>I wrote a small installation note on <a href=https://gist.github.com/ccwang002/449159cc2a05b1011467" target="_blank">gist</a>.</li>
-      </ul>
-      <pre class="tighter">
-      <code>conda install ipython-notebook
+  <section id="win-setup-anaconda" class="slide"><div>
+    <h2>(Scientific) Python setup on Windows</h2>
+    <ul class="tighter">
+      <li>If you can't come up a solution, <strong>use Miniconda / Anaconda</strong>.</li>
+      <li>I wrote a small installation note on <a href=https://gist.github.com/ccwang002/449159cc2a05b1011467" target="_blank">gist</a>.</li>
+    </ul>
+    <pre class="tighter">
+    <code>conda install ipython-notebook
 # or inside a conda virtual env,
 conda create -n ipy python=3.4 ipython-notebook
 activate ipy</code>
-      </pre>
-    </div></section>
+    </pre>
+  </div></section>
 
-    <section id="ipy-overview" class="slide"><div>
-      <h2 class="tighter">Overview</h2>
-      <img src="pics/IPyParallel_Overview.png" width="90%" alt="">
-      <pre class="language-ipython3 small">
-        <code>In [1]: from IPython.parallel import Client
+  <section id="ipy-overview" class="slide"><div>
+    <h2 class="tighter">Overview</h2>
+    <img src="pics/IPyParallel_Overview.png" width="90%" alt="">
+    <pre class="language-ipython3 small">
+      <code>In [1]: from IPython.parallel import Client
    ...: rc = Client() # connect controller
 In [2]: dview = rc[:] # return a View</code>
-      </pre>
-    </div><style>
-      #ipy-overview pre {
-        position: absolute;
-        top: 115px;
-        right: 175px;
-        border: 2px solid black;
-        padding: 0 5px;
-      }
-    </style></section>
+    </pre>
+  </div><style>
+    #ipy-overview pre {
+      position: absolute;
+      top: 115px;
+      right: 175px;
+      border: 2px solid black;
+      padding: 0 5px;
+    }
+  </style></section>
 
-    <section id="ipy-start-cluster" class="slide"><div>
-      <h2 class="tighter">Start IPython Cluster</h2>
-      <pre class="language-bash tighter small">
-        <code>$ ipcluster start
+  <section id="ipy-start-cluster" class="slide"><div>
+    <h2 class="tighter">Start IPython Cluster</h2>
+    <pre class="language-bash tighter small">
+      <code>$ ipcluster start
 # [IPClusterStart] Using existing profile dir: '.../profile_default'
 # [IPClusterStart] Starting ipcluster with [daemon=False]
 # ... (automatically set up controller and engines locally)</code>
-      </pre>
-      <p class="tighter">Or use IPython Notebook to start</p>
-      <img src="pics/ipynb_cluster.png" alt="">
-    </div><style>
-      #ipy-start-cluster img {
-        width: 100%;
-      }
-    </style>
-    </section>
+    </pre>
+    <p class="tighter">Or use IPython Notebook to start</p>
+    <img src="pics/ipynb_cluster.png" alt="">
+  </div><style>
+    #ipy-start-cluster img {
+      width: 100%;
+    }
+  </style></section>
 
-    <section id="ipy-demo" class="slide"><div>
-        <pre class="language-ipython3 full-page">
-<code>In [1]: from IPython.parallel import Client
+  <section id="ipy-demo" class="slide"><div>
+    <pre class="language-ipython3 full-page">
+      <code>In [1]: from IPython.parallel import Client
    ...: rc = Client()
 In [2]: rc.ids
 Out[2]: [0, 1, 2, 3]
@@ -419,12 +422,13 @@ In [4]: with dview.sync_imports():
 In [5]: ar = dview.map_sync(is_prime, PRIMES[:8]) # block
 In [6]: ar.get()
 Out[6]: [True, True, True, True, True, False, True, True]
-# (continued on next page)</code></pre>
-    </div></section>
+# (continued on next page)</code>
+    </pre>
+  </div></section>
 
-    <section id="ipy-parallel-magic" class="slide"><div>
-        <pre class="language-ipython3 tighter">
-<code>In [1]: %%px  # run on all engines by ipython magic
+  <section id="ipy-parallel-magic" class="slide"><div>
+    <pre class="language-ipython3 tighter">
+      <code>In [1]: %%px  # run on all engines by ipython magic
    ...: import numpy as np
    ...: rand_n = np.random.randint(10, 2)
 In [2]: dview['talk'] = 'Kaohsiung.py'  # spread variables
@@ -432,53 +436,177 @@ In [3]: dview.scatter('a', list(range(8)))
    ...: dview['a']   # and collect them back
 Out[3]: [[0, 1], [2, 3], [4, 5], [6, 7]]
 In [4]: dview.gather('a')  # in merged way
-Out[4]: [0, 1, 2, 3, 4, 5, 6, 7]
-</code></pre>
-    </div></section>
+Out[4]: [0, 1, 2, 3, 4, 5, 6, 7]</code>
+    </pre>
+  </div></section>
 
-    <section id="ipy-nb" class="slide"><div>
-        <h2>More in demo code</h2>
-        <p>Or this <a href="http://nbviewer.ipython.org/github/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/ipy-parallel/Hello_IPyParallel.ipynb">online IPython notebook</a> (hosted by Notebook Viewer)</p>
-        <p class="tighter">You can use ipython notebook and actually <i>run</i> it.</p>
-        <pre class="language-bash tighter"><code>ipython notebook
+  <section id="ipy-nb" class="slide"><div>
+    <h2>Get our hands wet</h2>
+    <p class="tighter">Try this <a href="http://nbviewer.ipython.org/github/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/ipy-parallel/Hello_IPyParallel.ipynb">online IPython notebook</a> (hosted by Notebook Viewer)</p>
+    <p class="tighter">Download it as an ipython notebook and <i>execute</i> it.</p>
+    <pre class="language-bash tighter">
+      <code>ipython notebook
 # Luanch IPython notebook server
 # on http://localhost:8888/
-# ... (terminated by Ctrl-C/Ctrl-Z)</code></pre>
-    </div></section>
+# ... (terminated by Ctrl-C/Ctrl-Z)</code>
+    </pre>
+  </div></section>
 
-    <section id="ipy-summary" class="slide"><div>
-        <h2>Summary for IPy Parallel</h2>
-        <ul>
-            <li>Awesome.</li>
-            <li>Provides more scalability (cross machine) and flexbility (interactive) through network connections</li>
-            <li>By adding an extra overhead for network messaging, object transfer</li>
-            <li>Passing object may bring up issues like pickling, but IPython handles most of them correctly.</li>
-        </ul>
-        <p class="note tighter next">What if we want to add workers <i>dynamically</i> during heavy load?</p>
-    </div><style>
-        #ipy-summary ul {
-            margin-bottom: 25px;
-        }
-    </style></section>
+  <section id="ipy-parallel-decorator" class="slide"><div>
+    <h2>Now more about the IPy Parallel</h2>
+    <p class="tighter">Decorator <a href="https://ipython.org/ipython-doc/stable/api/generated/IPython.parallel.client.view.html#IPython.parallel.client.view.View" target="_blank"><code>View.parallel</code></a> wraps your function as a parallel task runner, which works the same as previous way.</p>
+    <pre class="language-python3 tighter">
+      <code>@dview.parallel(block=False)
+def my_work(arg1, arg2):
+    pass
 
-	<section id="celery-cover" class="slide cover w" ><div>
-        <h2>Introducing <br />Celery</h2>
-		<img src="pics/mid.jpg" alt="">
-    </div>
-    <style>
-        #celery-cover h2 {
-            margin: 0px 0 0px;
-            color: #D91A3C;
-            text-align: left;
-            font-size: 100px;
-            line-height: 1.2em;
-            opacity: 0.8;
-            position: absolute;
-            top: 80px;
-            left: 60px;
-        }
-    </style>
-    </section>
+my_work.map(all_input1, all_input2)</code>
+    </pre>
+  </div><style>
+    #ipy-parallel-decorator a,
+    #ipy-parallel-decorator a > code {
+      color: #4B86C2;
+    }
+  </style></section>
+
+  <section id="ipy-parallel-view" class="slide"><div>
+    <h2>Different types of views - load balancer</h2>
+    <p class="tighter">View we used before was <a href="https://ipython.org/ipython-doc/dev/api/generated/IPython.parallel.client.view.html#IPython.parallel.client.view.DirectView" target="_blank"><code>DirectView</code></a>, a one-to-one mapping of all available engines. Input tasks was first split then passed to engines <strong>before execution</strong>.</p>
+    <p class="next tighter">Another view called <a href="https://ipython.org/ipython-doc/dev/api/generated/IPython.parallel.client.view.html#IPython.parallel.client.view.LoadBalancedView"><code>LoadBalancedView</code></a> passes the input tasks to idle engines <strong>on the fly</strong> to prevent task congestion in busy engines.</p>
+    <pre class="language-python3 next">
+      <code>rc = Client()
+lbview = <mark>rc.load_balanced_view()</mark></code>
+    </pre>
+  </div><style>
+    #ipy-parallel-view a,
+    #ipy-parallel-view a > code {
+      color: #4B86C2;
+    }
+  </style></section>
+
+  <section id="ipy-nb-load-balance" class="slide"><div>
+    <h2>How load balance helps the parallelization</h2>
+    <p>Visualize and demo in <a href="http://nbviewer.ipython.org/github/ccwang002/2015Talk-IPython-Parallel/blob/master/demo_code/ipy-parallel/Load%20Balanced%20View.ipynb">this notebook</a>.</p>
+    <p>More Python packages required: <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://matplotlib.org/">matplotlib</a>, and <a href="http://stanford.edu/~mwaskom/software/seaborn/">seaborn</a>. On Anaconda, the installation is as trivial as one single command.</p>
+    <pre><code>conda install pandas matplotlib seaborn</code></pre>
+  </div></section>
+
+  <section id="ipy-view-direct" class="slide"><div>
+    <h2>Task execution - direct view</h2>
+    <img class="full-width" src="pics/task_exe_history_direct.svg" alt="">
+    <p class="annotation next">A deliberate worst case for preallocated task.<br>Optimally should only take around 3 seconds.</p>
+  </div><style>
+    #ipy-view-direct p.annotation {
+      position: absolute;
+      width: 250px;
+      padding: 10px 15px;
+      top: 240px;
+      right: 160px;
+      color: #4D4D48;
+      line-height: 1.5em;
+      font-size: 24px;
+      background-color: #F1F1E4;
+    }
+  </style></section>
+
+  <section id="ipy-view-load-balanced" class="slide"><div>
+    <h2>Task execution - load balanced</h2>
+    <img class="full-width" src="pics/task_exe_history_load_balanced.svg" alt="">
+    <p class="annotation next">Note the space between adjacent tasks.<br>
+    If tasks of different engines complete at the same time, they stocked at the load balancer so a longer pause required. (see randomized work for comparison)</p>
+  </div><style>
+    #ipy-view-load-balanced p.annotation {
+      position: absolute;
+      width: 300px;
+      padding: 10px 15px;
+      top: 225px;
+      left: 180px;
+      color: #FFF;
+      line-height: 1.5em;
+      font-size: 24px;
+      background-color: #7973AE;
+    }
+  </style></section>
+
+  <section id="ipy-rand-task-direct" class="slide"><div>
+    <h2>Random task execution - direct view</h2>
+    <img class="full-width" src="pics/task_random_direct.svg" alt="">
+    <p class="annotation">All engines run the exactly same number of tasks (shown by color)</p>
+  </div><style>
+    #ipy-rand-task-direct p.annotation {
+      position: relative;
+      bottom: 20px;
+    }
+  </style></section>
+
+  <section id="ipy-rand-task-load-balanced" class="slide"><div>
+    <h2>Random task execution - load balanced</h2>
+    <img class="full-width" src="pics/task_random_load_balanced.svg" alt="">
+    <p class="annotation">Some engines run fewer tasks if their previous work load are heavier. Pause space are shorter since they return randomly.</p>
+  </div><style>
+    #ipy-rand-task-load-balanced p.annotation {
+      position: relative;
+      bottom: 10px;
+    }
+  </style></section>
+
+  <section id="ipy-cluster" class="slide"><div>
+    <h2 class="tighter">IPy parallel across machines</h2>
+    <ul class="tighter">
+      <li>Previously we use <code>ipcluster</code> to start the cluster.</li>
+      <li>Now break it down to <code>ipcontroller</code> and <code>ipcluster engines</code>.</li>
+      <li>IPy controller creates a connection info file at <br><code>&lt;profile_dir&gt;/security/ipcontroller-engine.json</code></li>
+      <li>Engines read that file to know how to connect the controller (e.g. which ip and port).</li>
+      <li>To sum up, (1) launch controller; (2) launch engines (may on different machines); (3) connect by calling Client().</li>
+    </ul>
+    <p>More detailed guide: <a href="https://github.com/tritemio/PyBroMo/wiki/Howto-setup-an-IPython-cluster">PyBroMo's  wiki</a>.</p>
+  </div></section>
+
+  <section id="ipy-cluster-demo" class="slide"><div>
+  <pre class="tighter language-bash">
+    <code>ipython profile create --parallel --profile=parallel
+# on master
+ipcontroller --profile=parallel
+# on slave(s)
+ipcluster engines --profile=parallel \
+  --file=/path/to/ipcontroller-engine.json
+# or modify path of `c.IPEngineApp.url_file` in
+# ~\.ipython\profile_parallel\ipengine_config.py </code>
+  </pre>
+  <p class="tighter">Then use it normally by <code>rc = Client(profile='parallel')</code></p>
+  </div></section>
+
+  <section id="ipy-summary" class="slide"><div>
+    <h2>Summary for IPy Parallel</h2>
+    <ul>
+      <li>Awesome.</li>
+      <li>Provides more scalability (cross machine) and flexbility (interactive) through network connections</li>
+      <li>By adding an extra overhead for network messaging, object transfer</li>
+      <li>Passing object may bring up issues like pickling, but IPython handles most of them correctly.</li>
+    </ul>
+    <p class="note tighter next">What if we want to add workers <i>dynamically</i> during heavy load?</p>
+  </div><style>
+    #ipy-summary ul {
+      margin-bottom: 25px;
+    }
+  </style></section>
+
+  <section id="celery-cover" class="slide cover w"><div>
+    <h2>Introducing <br />Celery</h2>
+    <img src="pics/mid.jpg" alt="">
+  </div><style>
+      #celery-cover h2 {
+        margin: 0px 0 0px;
+        color: #D91A3C;
+        text-align: left;
+        font-size: 100px;
+        line-height: 1.2em;
+        opacity: 0.8;
+        position: absolute;
+        top: 80px;
+        left: 60px;
+      }
+  </style></section>
 
   <section id="celery-intro" class="slide"><div>
     <h2 class="tighter">Celery Intro</h2>
@@ -497,24 +625,24 @@ Out[4]: [0, 1, 2, 3, 4, 5, 6, 7]
     </ul>
   </div></section>
 
-    <section id="celery-overview" class="slide"><div>
-        <h2 class="tighter">Overview</h2>
-        <img src="pics/Celery-RabbitMQ.png" alt="">
-        <p class="ref tighter">From Abhishek Tiwari,<br /><a href="http://abhishek-tiwari.com/post/amqp-rabbitmq-and-celery-a-visual-guide-for-dummies" target="_blank"><i>AMQP, RabbitMQ and Celery - A Visual Guide For Dummies</i></a></p>
-    </div><style>
-        #celery-overview p.ref {
-            position: absolute;
-            font-size: 18px;
-            text-align: right;
-            width: 450px;
-            bottom: 0px;
-            right: 120px;
-        }
-    </style></section>
+  <section id="celery-overview" class="slide"><div>
+    <h2 class="tighter">Overview</h2>
+    <img src="pics/Celery-RabbitMQ.png" alt="">
+    <p class="ref tighter">From Abhishek Tiwari,<br /><a href="http://abhishek-tiwari.com/post/amqp-rabbitmq-and-celery-a-visual-guide-for-dummies" target="_blank"><i>AMQP, RabbitMQ and Celery - A Visual Guide For Dummies</i></a></p>
+  </div><style>
+    #celery-overview p.ref {
+      position: absolute;
+      font-size: 18px;
+      text-align: right;
+      width: 450px;
+      bottom: 0px;
+      right: 120px;
+    }
+  </style></section>
 
-    <section id="celery-hello" class="slide"><div>
-    <pre class="language-python3 full-page">
-      <code> # Application under tasks.py
+  <section id="celery-hello" class="slide"><div>
+  <pre class="language-python3 full-page">
+    <code> # Application under tasks.py
 app = Celery('tasks', broker='amqp://guest@localhost//')
 @app.task
 def is_prime(n):
@@ -527,131 +655,131 @@ result = is_prime.delay(PRIME)
 print(result.get())</code></pre>
   </div></section>
 
-    <section id="final-summary" class="slide"><div>
-        <h2 class="tighter">Summary</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Builtin</th>
-                    <th>IPy Parallel</th>
-                    <th>Celery</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>High Level APIs</th>
-                    <td>✔ </td>
-                    <td>✔ </td>
-                    <td>✔ </td>
-                </tr>
-                <tr>
-                    <th>Spreading data</th>
-                    <td>△ </td>
-                    <td>✔ </td>
-                    <td>△ </td>
-                </tr>
-                <tr>
-                    <th>Interactive mode</th>
-                    <td>✕ </td>
-                    <td>✔ </td>
-                    <td>✔ </td>
-                </tr>
-                <tr>
-                    <th>Scale across machines</th>
-                    <td>✕ </td>
-                    <td>✔ </td>
-                    <td>✔ </td>
-                </tr>
-                <tr>
-                    <th>Hot add/drop workers</th>
-                    <td>✕ </td>
-                    <td>△ </td>
-                    <td>✔ </td>
-                </tr>
-                <tr>
-                  <th>Overhead (relatively)</th>
-                  <td>S</td>
-                  <td>M</td>
-                  <td>L</td>
-                </tr>
-              </tbody>
-        </table>
-        <p class="note">✔  = trivial; △  = some lines of code; ✕ = plenty lines of code<br>They can work as partners : )</p>
-    </div><style>
+  <section id="final-summary" class="slide"><div>
+    <h2 class="tighter">summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>builtin</th>
+          <th>ipy parallel</th>
+          <th>celery</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>high level apis</th>
+          <td>✔ </td>
+          <td>✔ </td>
+          <td>✔ </td>
+        </tr>
+        <tr>
+          <th>spreading data</th>
+          <td>△ </td>
+          <td>✔ </td>
+          <td>△ </td>
+        </tr>
+        <tr>
+          <th>interactive mode</th>
+          <td>✕ </td>
+          <td>✔ </td>
+          <td>✔ </td>
+        </tr>
+        <tr>
+          <th>scale across machines</th>
+          <td>✕ </td>
+          <td>✔ </td>
+          <td>✔ </td>
+        </tr>
+        <tr>
+          <th>hot add/drop workers</th>
+          <td>✕ </td>
+          <td>△ </td>
+          <td>✔ </td>
+        </tr>
+        <tr>
+          <th>overhead (relatively)</th>
+          <td>s</td>
+          <td>m</td>
+          <td>l</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">✔  = trivial; △  = some lines of code; ✕ = plenty lines of code<br>they can work as partners : )</p>
+  </div><style>
     #final-summary table {
       margin-bottom: 25px;
     }
-    </style></section>
+  </style></section>
 
-    <section id="final-naive" class="slide"><div>
-        <h2 class="tighter">How is our naive parallelism?</h2>
+  <section id="final-naive" class="slide"><div>
+    <h2 class="tighter">How is our naive parallelism?</h2>
+    <ul>
+      <li>Easy to use; clean APIs; boost your computation by some factor</li>
+      <li>Can come up the parallel strategy by try-n-error</li>
+      <li>Heavy jobs (that run fews day) would have more significant performance improvement</li>
+      <li class="red">Your algorithm matters</li>
+    </ul>
+    <p class="next inline">But that comes with price</p>
+    <ul class="next">
+      <li>Copy objects a lot <span class="next">→ use database</span></li>
+      <li>Memory usage <span class="next">→ buy memory XD</span></li>
+      <li>Unaccepted overhead sometimes <span class="next">→ avoid this pattern</span></li>
+    </ul>
+  </div><style>
+    #final-naive ul {
+      margin-bottom: 25px;
+    }
+  </style></section>
+
+  <section id="takehome-msg" class="slide"><div>
+    <h2>Take-home message</h2>
+    <ul>
+      <li>Put these tools under your pillow
         <ul>
-            <li>Easy to use; clean APIs; boost your computation by some factor</li>
-            <li>Can come up the parallel strategy by try-n-error</li>
-            <li>Heavy jobs (that run fews day) would have more significant performance improvement</li>
-            <li class="red">Your algorithm matters</li>
+          <li>multiprocessing, multithreading, and concurrent.futures</li>
+          <li>IPython Parallel</li>
+          <li>Load balanced view</li>
+          <li>Python 3.4 and asyncio (if tasks are IO bound)</li>
         </ul>
-        <p class="next inline">But that comes with price</p>
-        <ul class="next">
-            <li>Copy objects a lot <span class="next">→ use database</span></li>
-            <li>Memory usage <span class="next">→ buy memory XD</span></li>
-            <li>Unaccepted overhead sometimes <span class="next">→ avoid this pattern</span></li>
-        </ul>
-    </div><style>
-        #final-naive ul {
-            margin-bottom: 25px;
-        }
-    </style></section>
+      </li>
+      <li>Parallelism is hard but keep calm, there are simple situations</li>
+      <li>Enjoy PyCon APAC! (we'd like to have your feedback)</li>
+    </ul>
+  </div></section>
 
-    <section id="takehome-msg" class="slide"><div>
-        <h2>Take-home message</h2>
-        <ul>
-            <li>Put these tools under your pillow
-                <ul>
-                    <li>multiprocessing, multithreading, concurrent</li>
-                    <li>IPython Parallel</li>
-                    <li>Python 3.4 and asyncio (if tasks are IO bound)</li>
-                </ul>
-            </li>
-            <li>Parallelism is hard but keep calm, there are simple situations</li>
-            <li class="next">Enjoy PyCon APAC! (we'd like to have your feedback)</li>
-        </ul>
-    </div></section>
+  <!-- End Slide -->
+  <section id='end' class='slide cover shout w'><div>
+    <h2>Thank You!</h2>
+    <img src="pics/end.jpg" alt="">
+  </div><style>
+    #end h2 {
+      position: absolute;
+      text-align: left;
+      top: 300px;
+      left: 50px;
+      color: #0376A6;
+      font-size: 92px;
+      opacity: 0.9;
+    }
+  </style></section>
 
-    <!-- End Slide -->
-    <section id='end' class='slide cover shout w'><div>
-        <h2>Thank You!</h2>
-        <img src="pics/end.jpg" alt="">
-    </div>
-    <style>
-        #end h2 {
-            position: absolute;
-            text-align: left;
-            top: 300px;
-            left: 50px;
-            color: #0376A6;
-            font-size: 92px;
-            opacity: 0.9;
-        }
-    </style></section>
+  <!-- END OF SLIDE CONTENT -->
+  <p class="badge"><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel" target="_blank">Fork me on Github</a></p>
+  <div class="progress"><div></div></div>
 
-    <!-- END OF SLIDE CONTENT -->
-    <p class="badge"><a href="https://github.com/ccwang002/2015Talk-IPython-Parallel" target="_blank">Fork me on Github</a></p>
-    <div class="progress"><div></div></div>
-
-    <!-- Library -->
-    <script src="lib/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <script src="lib/shower/shower.min.js"></script>
-    <!-- Mathjax -->
-    <!-- During local development, use localhost mathjax for speed-->
-    <!--<script src="file:///Users/liang/.ipython/profile_default/static/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <!-- online Mathjax CDN -->
-    <!--
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    -->
+  <!-- Library -->
+  <script src="lib/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script src="lib/shower/shower.min.js"></script>
+  <!-- Mathjax -->
+  <!-- During local development, use localhost mathjax for speed-->
+  <!--<script src="file:///Users/liang/.ipython/profile_default/static/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+  <!-- online Mathjax CDN -->
+  <!--
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  -->
 </body>
 </html>
