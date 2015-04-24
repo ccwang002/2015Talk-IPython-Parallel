@@ -17,14 +17,14 @@
   <!-- Header in overview -->
   <header class="caption">
     <h1>IPython Parallel 使用與經驗分享</h1>
-    <p style="line-height: 32px; padding-top:15px;"><a href="http://liang2.tw">Liang Bo Wang (亮亮)</a>, 2015-04-22</p>
+    <p style="line-height: 32px; padding-top:15px;"><a href="http://liang2.tw">Liang Bo Wang (亮亮)</a>, 2015-04-27</p>
   </header>
 
   <!-- START OF SLIDE CONTENT -->
 
   <!-- Cover slide -->
   <section id="cover" class="slide cover w"><div>
-    <h3 id="talk-subheader">Kaohsiung Python User Group, 2015-04-22</h3>
+    <h3 id="talk-subheader">Kaohsiung Python User Group, 2015-04-27</h3>
     <h2 id="talk-header">IPython Parallel 使用與經驗分享</h2>
     <p id="talk-author">
       <a href="http://liang2.tw" target="_blank">亮亮</a> under CC 4.0 BY license
@@ -135,8 +135,14 @@
   <section id="story-epic" class="slide cover w"><div>
     <h2>That's exactly what I want</h2>
     <img src="pics/EPIC_load_ipy.jpg" alt="">
-    <p class="next">Not hard if your tasks are independent. Here we focus on the easiest pattern.</p>
+    <div class="centered next">
+      <p class="tighter">Not hard to implement if your tasks are independent. Here we focus on the easiest pattern:</p>
+      <p class="tighter" style="text-align: center">Apply same program on a bunch of input.</p>
+    </div>
   </div><style>
+    #story-epic div {
+      position: relative;
+    }
     #story-epic h2 {
       color: #EEE;
       text-align: center;
@@ -145,6 +151,20 @@
       position: absolute;
       bottom: 60px;
       left: 0px;
+    }
+    #story-epic div.centered {
+      color: #EEE;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 550px;
+      height: 130px;
+      padding: 20px;
+      margin: -85px 0 0 -295px;
+      line-height: 1.5em;
+      background-color: rgba(216, 82, 126, 0.9);
+      border-radius: 20px;
     }
   </style></section>
 
@@ -384,6 +404,7 @@ activate ipy</code>
    ...: rc = Client() # connect controller
 In [2]: dview = rc[:] # return a View</code>
     </pre>
+    <p class="reference">Adapted from the <a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html#architecture-overview">official docs</a></p>
   </div><style>
     #ipy-overview pre {
       position: absolute;
@@ -392,6 +413,13 @@ In [2]: dview = rc[:] # return a View</code>
       border: 2px solid black;
       padding: 0 5px;
     }
+    #ipy-overview p {
+      position: relative;
+      bottom: 30px;
+      left: 10px;
+      font-size: 16px;
+    }
+
   </style></section>
 
   <section id="ipy-start-cluster" class="slide"><div>
@@ -576,6 +604,31 @@ ipcluster engines --profile=parallel \
   <p class="tighter">Then use it normally by <code>rc = Client(profile='parallel')</code></p>
   </div></section>
 
+  <section id="ipy-real-exp" class="slide twocol"><div>
+  <div class="left">
+  <h2 class="tighter">Experience</h2>
+  <ul>
+    <li>Scale on 16(64) cores machine(s).</li>
+    <li class="next">Yes, it's Windows, <strong>best OS ever</strong>.</li>
+    <li class="next">It sorts the scores of image patches from the classifier. Initially, that huge matrix eat up ~20GB per image, not scalable.</li>
+    <li class="next">Switched to harddisk-cached HDF5 solution (another story I'll talk in PyCon APAC 2015)</li>
+    <li class="next"><strong>Best scale limit: 2GB RAM per core.</strong> Above that one needs machines with large ram.</li>
+  </ul>
+  </div>
+  <div class="right">
+    <img src="pics/parallel_exp.png" alt="">
+  </div>
+  </div><style>
+    #ipy-real-exp div.left ul {
+      font-size: 24px;
+      line-height: 1.7em;
+    }
+    #ipy-real-exp div.right > img {
+      width: 100%;
+      padding: 30px 0 0 0;
+    }
+  </style></section>
+
   <section id="ipy-summary" class="slide"><div>
     <h2>Summary for IPy Parallel</h2>
     <ul>
@@ -642,7 +695,7 @@ ipcluster engines --profile=parallel \
 
   <section id="celery-hello" class="slide"><div>
   <pre class="language-python3 full-page">
-    <code> # Application under tasks.py
+    <code># Application under tasks.py
 app = Celery('tasks', broker='amqp://guest@localhost//')
 @app.task
 def is_prime(n):
