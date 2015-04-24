@@ -164,7 +164,7 @@
       margin: -85px 0 0 -295px;
       line-height: 1.5em;
       background-color: rgba(216, 82, 126, 0.9);
-      border-radius: 20px ; 
+      border-radius: 20px;
     }
   </style></section>
 
@@ -604,6 +604,31 @@ ipcluster engines --profile=parallel \
   <p class="tighter">Then use it normally by <code>rc = Client(profile='parallel')</code></p>
   </div></section>
 
+  <section id="ipy-real-exp" class="slide twocol"><div>
+  <div class="left">
+  <h2 class="tighter">Experience</h2>
+  <ul>
+    <li>Scale on 16(64) cores machine(s).</li>
+    <li class="next">Yes, it's Windows, <strong>best OS ever</strong>.</li>
+    <li class="next">It sorts the scores of image patches from the classifier. Initially, that huge matrix eat up ~20GB per image, not scalable.</li>
+    <li class="next">Switched to harddisk-cached HDF5 solution (another story I'll talk in PyCon APAC 2015)</li>
+    <li class="next"><strong>Best scale limit: 2GB RAM per core.</strong> Above that one needs machines with large ram.</li>
+  </ul>
+  </div>
+  <div class="right">
+    <img src="pics/parallel_exp.png" alt="">
+  </div>
+  </div><style>
+    #ipy-real-exp div.left ul {
+      font-size: 24px;
+      line-height: 1.7em;
+    }
+    #ipy-real-exp div.right > img {
+      width: 100%;
+      padding: 30px 0 0 0;
+    }
+  </style></section>
+
   <section id="ipy-summary" class="slide"><div>
     <h2>Summary for IPy Parallel</h2>
     <ul>
@@ -670,7 +695,7 @@ ipcluster engines --profile=parallel \
 
   <section id="celery-hello" class="slide"><div>
   <pre class="language-python3 full-page">
-    <code> # Application under tasks.py
+    <code># Application under tasks.py
 app = Celery('tasks', broker='amqp://guest@localhost//')
 @app.task
 def is_prime(n):
