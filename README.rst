@@ -2,6 +2,7 @@
 IPython Parallel 使用與經驗分享
 *******************************
 
+2015-04-27 高雄 Python User Group
 
 授權 License
 ============
