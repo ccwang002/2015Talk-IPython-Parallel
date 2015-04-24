@@ -348,28 +348,28 @@ Multiprocess: 7.98</code>
     </div></section>
 
     <section id="ipy-setup" class="slide"><div>
-        <h2 class="tighter">Setup</h2>
-        <p class="tighter">Trivial if you setup your Python correctly</p>
+        <h2>Setup</h2>
+        <p class="tighter">Trivial for Python 3.4+, which comes along with <a href="https://pip.pypa.io/en/latest/installing.html">pip</a>.</p>
         <pre class="language-bash tighter">
-<code>python3 -m ensurepip
-# or apt-get install python3-pip
-# or python3 ez_setup.py from setuptools
+<code># For Debian/Ubuntu, apt-get install ipython3-notebook
 pip3 install ipython[all]</code>
         </pre>
-        <p>Windows? <span class="next">(... get a <del>*unix</del> Anaconda environment)</span><br />
-            or search <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank">Unofficial Windows Binaries for Python</a></p>
+        <p class="tighter">Windows? <span class="next"><del>Get a *unix system.</del></span</p>
+        <p class="next tighter">Try Anaconda(Miniconda) scientific Python solution, which automatically manages both python and <em>external</em> dependencies.</p>
     </div></section>
 
     <section id="win-setup-anaconda" class="slide"><div>
-      <h2>Serious (scientific env) setup on Windows</h2>
-      <ul>
+      <h2>(Scientific) Python setup on Windows</h2>
+      <ul class="tighter">
         <li>If you can't come up a solution, <strong>use Miniconda / Anaconda</strong>.</li>
-        <li>I wrote a small installation note on <a href="https://www.ptt.cc/bbs/Python/M.1422708625.A.497.html" target="_blank">ptt</a>.</li>
+        <li>I wrote a small installation note on <a href=https://gist.github.com/ccwang002/449159cc2a05b1011467" target="_blank">gist</a>.</li>
       </ul>
-      <pre>
-      <code>conda install ipython-notebook</code>
+      <pre class="tighter">
+      <code>conda install ipython-notebook
+# or inside a conda virtual env,
+conda create -n ipy python=3.4 ipython-notebook
+activate ipy</code>
       </pre>
-      <p class="note">IPython notebook will launch a web browser and listen http://localhost:8888</p>
     </div></section>
 
     <section id="ipy-overview" class="slide"><div>
@@ -410,7 +410,7 @@ In [2]: dview = rc[:] # return a View</code>
     <section id="ipy-demo" class="slide"><div>
         <pre class="language-ipython3 full-page">
 <code>In [1]: from IPython.parallel import Client
-        rc = Client()
+   ...: rc = Client()
 In [2]: rc.ids
 Out[2]: [0, 1, 2, 3]
 In [3]: dview = rc[:]  # DirectView use all engines
@@ -419,7 +419,7 @@ In [4]: with dview.sync_imports():
 In [5]: ar = dview.map_sync(is_prime, PRIMES[:8]) # block
 In [6]: ar.get()
 Out[6]: [True, True, True, True, True, False, True, True]
-</code></pre>
+# (continued on next page)</code></pre>
     </div></section>
 
     <section id="ipy-parallel-magic" class="slide"><div>
@@ -427,11 +427,11 @@ Out[6]: [True, True, True, True, True, False, True, True]
 <code>In [1]: %%px  # run on all engines by ipython magic
    ...: import numpy as np
    ...: rand_n = np.random.randint(10, 2)
-In [2]: dview['talk'] = 'MLDM Monday'   # spread variables
+In [2]: dview['talk'] = 'Kaohsiung.py'  # spread variables
 In [3]: dview.scatter('a', list(range(8)))
    ...: dview['a']   # and collect them back
 Out[3]: [[0, 1], [2, 3], [4, 5], [6, 7]]
-In [4]: dview.gather('a')
+In [4]: dview.gather('a')  # in merged way
 Out[4]: [0, 1, 2, 3, 4, 5, 6, 7]
 </code></pre>
     </div></section>
@@ -609,13 +609,12 @@ print(result.get())</code></pre>
         <ul>
             <li>Put these tools under your pillow
                 <ul>
-                    <li>multiprocessing, concurrent</li>
+                    <li>multiprocessing, multithreading, concurrent</li>
                     <li>IPython Parallel</li>
-                    <li>Celery</li>
                     <li>Python 3.4 and asyncio (if tasks are IO bound)</li>
                 </ul>
             </li>
-            <li>Parallelism is hard <span class="next">but keep calm, there are simple situations</span></li>
+            <li>Parallelism is hard but keep calm, there are simple situations</li>
             <li class="next">Enjoy PyCon APAC! (we'd like to have your feedback)</li>
         </ul>
     </div></section>
