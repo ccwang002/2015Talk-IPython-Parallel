@@ -14,7 +14,7 @@ def is_prime(n):
     return True
 
 def orig_way():
-    ans = [is_prime(prime) for prime in PRIMES]
+    ans = list(map(is_prime, PRIMES))
     return ans
 
 if __name__ == '__main__':

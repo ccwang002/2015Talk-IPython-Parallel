@@ -171,7 +171,7 @@
   <section id="val-prime" class="slide"><div>
     <h2 class="tighter">Prime number validation</h2>
     <pre class="language-python3">
-      <code>PRIMES = [int(l) for l in open('prime_list.txt')]
+      <code>PRIMES = [112272535095293, 112582705942171, ...]
 def is_prime(n):
     if n % 2 == 0:
         return False
@@ -188,7 +188,8 @@ def is_prime(n):
     <p class="tighter">Validate them one-by-one and benchmark by <code>timeit</code></p>
     <pre class="language-python3">
       <code>def orig_way():
-    ans = [is_prime(prime) for prime in PRIMES]
+    ans = list(map(is_prime, PRIMES))
+    # ans = [is_prime(prime) for prime in PRIMES]
     return ans
 
 from timeit import timeit
